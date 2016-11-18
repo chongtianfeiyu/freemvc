@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="D:/repo/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/repo/log4j/log4j/1.2.16/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="D:/repo/org/slf4j/slf4j-api/1.6.0/slf4j-api-1.6.0.jar"/>
+	<classpathentry kind="lib" path="D:/repo/org/slf4j/slf4j-log4j12/1.6.0/slf4j-log4j12-1.6.0.jar"/>
+	<classpathentry kind="lib" path="D:/repo/org/springframework/spring-asm/3.0.5.RELEASE/spring-asm-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/repo/org/springframework/spring-webmvc/3.0.5.RELEASE/spring-webmvc-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/repo/org/springframework/spring-web/3.0.5.RELEASE/spring-web-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/repo/org/springframework/spring-jdbc/3.0.5.RELEASE/spring-jdbc-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/repo/org/springframework/spring-expression/3.0.5.RELEASE/spring-expression-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/repo/org/springframework/spring-context-support/3.0.5.RELEASE/spring-context-support-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/repo/org/springframework/spring-context/3.0.5.RELEASE/spring-context-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/repo/org/springframework/spring-core/3.0.5.RELEASE/spring-core-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/repo/org/springframework/spring-tx/3.0.5.RELEASE/spring-tx-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/repo/org/springframework/spring-beans/3.0.5.RELEASE/spring-beans-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/repo/org/springframework/spring-aop/3.0.5.RELEASE/spring-aop-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/19lou/apache-tomcat-7.0.14/lib/servlet-api.jar" sourcepath="D:/repo/org/apache/tomcat/tomcat-servlet-api/7.0.14/tomcat-servlet-api-7.0.14-sources.jar"/>
+	<classpathentry kind="lib" path="D:/thirdjar/com.springsource.org.aopalliance-1.0.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_251"/>
+	<classpathentry kind="lib" path="D:/Program Files/Java/jdk1.6.0_25/javax-jms-1.1.1.jar" sourcepath="D:/Program Files/Java/jdk1.6.0_25/javax-jms-1.1.1-sources.jar"/>
+	<classpathentry kind="lib" path="D:/repo/com/esotericsoftware/kryo/kryo/2.21/kryo-2.21.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
