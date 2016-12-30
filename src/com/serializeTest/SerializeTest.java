@@ -16,7 +16,7 @@ import com.esotericsoftware.kryo.io.Output;
 
 /**
  * 序列化测试。
- * 1、对象中含有未序列化的对象，是可序列化
+ * 1、对象中含有未序列化的对象，不可序列化,抛异常
  * 2、A继承了可序列化的类B，A也是可序列化的
  * @author liaokangli
  *

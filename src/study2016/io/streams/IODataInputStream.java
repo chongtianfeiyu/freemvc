@@ -20,7 +20,7 @@ public class IODataInputStream {
 	public static void dataInputStreamNormal(){
 		try{
 			DataInputStream dis = new DataInputStream(new FileInputStream(""));
-		
+//		    dis.read(b);
 			
 		}catch(Exception e){
 			e.printStackTrace();

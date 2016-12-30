@@ -13,7 +13,7 @@ public class IOFileInputStream {
 
 	
 	public static void main(String[] args){
-//		inputStreamNormal();
+		inputStreamNormal();
 		inputStreamBytes();
 	}
 	
@@ -23,9 +23,10 @@ public class IOFileInputStream {
 	public static void inputStreamNormal(){
 		try{
 			
-			FileInputStream fis = new FileInputStream(new File("G:\\log_input.txt"));	
+			FileInputStream fis = new FileInputStream(new File("f:\\testOut.txt"));	
 			int count = 0;
 			while((count = fis.read()) != -1){
+				System.out.println(count);
 				System.out.println((char)count);
 			}
 			
@@ -39,7 +40,7 @@ public class IOFileInputStream {
 	 */
 	public static void inputStreamBytes(){
        try{		
-			FileInputStream fis = new FileInputStream(new File("D:\\tmp\\sycEternalCache.data"));	
+			FileInputStream fis = new FileInputStream(new File("f:\\testOut.txt"));	
 			int count = 0;
 			byte[] results = new byte[64];
 			while((count = fis.read(results)) != -1){

@@ -44,7 +44,7 @@ public class RegularTest {
 //		testLookbehidahead();
 //		testNotLookahead();
 //		testConditionTrackBack();
-//		testConditionLookahead();
+		testConditionLookahead();
 		
 		
 //		testNot();
@@ -52,7 +52,8 @@ public class RegularTest {
 		
 		
 //		testtt1();
-		testtt();
+//		testtt();
+//		testtt2();
 	}
 	
 	public static void testtt1(){
@@ -74,6 +75,16 @@ public class RegularTest {
 //		Pattern pattern = Pattern.compile("(,|^){1}(早知道){1}(,|$){1}");
 //		Pattern pattern = Pattern.compile("[,^](早知道){1}[,$]");
 		Pattern pattern = Pattern.compile("(,)?早知道(?:(?=,),)");
+		Matcher m = pattern.matcher(str);
+		while(m.find()){
+			System.out.println("group:"+m.group()+";"+m.start()+";"+m.end());
+		}
+	}
+	
+	public static void testtt2(){
+		String str = "30,0 h";
+
+		Pattern pattern = Pattern.compile("(\\d+)(?:(?=,),\\d+)");
 		Matcher m = pattern.matcher(str);
 		while(m.find()){
 			System.out.println("group:"+m.group()+";"+m.start()+";"+m.end());

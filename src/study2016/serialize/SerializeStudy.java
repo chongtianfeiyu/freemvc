@@ -23,7 +23,7 @@ public class SerializeStudy {
 	
 	public static void main(String[] args){
 		/** 正常序列化*/
-//		serializeNormal();
+		serializeNormal();
 		
 		/** 嵌套序列化类型*/
 //		serializeNestedType();
@@ -42,7 +42,7 @@ public class SerializeStudy {
 		
 //		seriablizeHook();
 		
-		seriablizeDES();
+//		seriablizeDES();
 		
 		commonDerialize();
 	}
@@ -214,8 +214,9 @@ public class SerializeStudy {
     public static void commonDerialize(){
       try{
 		// 反序列化
-		ObjectInputStream ois = new ObjectInputStream(new FileInputStream("G:\\seriablizeDES.bin"));
+		ObjectInputStream ois = new ObjectInputStream(new FileInputStream("G://parentSeriable.bin"));
 		Object object = ois.readObject();		
+		ParentSeriable ps = (ParentSeriable)object;
 		Object or = null;
 		// 反射获取方法
 		Class classz = object.getClass();

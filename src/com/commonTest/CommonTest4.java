@@ -15,9 +15,9 @@ import java.util.Arrays;
  */
 public class CommonTest4 {
      public static void main(String[] args) throws UnsupportedEncodingException {
-    	String orStr = "马术俱乐部";
-    	System.out.println("范的gbk,十六进制:"+Hex.encodeHexStr(orStr.getBytes("gbk")));;
-    	System.out.println("范的utf-8,十六进制:"+Hex.encodeHexStr(orStr.getBytes("utf-8")));;
+    	String orStr = "中";
+    	System.out.println("中的gbk,十六进制:"+Hex.encodeHexStr(orStr.getBytes("gbk")));;
+    	System.out.println("中的utf-8,十六进制:"+Hex.encodeHexStr(orStr.getBytes("utf-8")));;
     	System.out.println("范的,十六进制:"+new String(orStr.getBytes("utf-8"),"gbk"));;
 //		Person p = new Person("");
 //		System.out.print(p);

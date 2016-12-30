@@ -1,5 +1,7 @@
 package com.commonTest;
 
+import java.io.UnsupportedEncodingException;
+
 /**
  * 将字节数组转换为十六进制
  * @author liaokangli
@@ -135,9 +137,9 @@ public class Hex {
         }
         return digit;
     }
-    public static void main(String[] args) {
-        String srcStr = "待转换字符串";
-        String encodeStr = encodeHexStr(srcStr.getBytes());
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        String srcStr = "64";
+        String encodeStr = encodeHexStr(srcStr.getBytes("UTF-8"));
         String decodeStr = new String(decodeHex(encodeStr.toCharArray()));
         System.out.println("转换前：" + srcStr);
         System.out.println("转换后：" + encodeStr);

@@ -10,7 +10,7 @@ import java.nio.charset.*;
 
 import sun.nio.cs.HistoricallyNamedCharset;
 
-public class TestStreamDecoder extends Writer
+public class TestStreamEecoder extends Writer
 {
 
     private static final int DEFAULT_BYTE_BUFFER_SIZE = 8192;
@@ -23,7 +23,7 @@ public class TestStreamDecoder extends Writer
     }
 
     // Factories for java.io.OutputStreamWriter
-    public static TestStreamDecoder forOutputStreamWriter(OutputStream out,
+    public static TestStreamEecoder forOutputStreamWriter(OutputStream out,
                                                       Object lock,
                                                       String charsetName)
         throws UnsupportedEncodingException
@@ -33,33 +33,33 @@ public class TestStreamDecoder extends Writer
             csn = Charset.defaultCharset().name();
         try {
             if (Charset.isSupported(csn))
-                return new TestStreamDecoder(out, lock, Charset.forName(csn));
+                return new TestStreamEecoder(out, lock, Charset.forName(csn));
         } catch (IllegalCharsetNameException x) { }
         throw new UnsupportedEncodingException (csn);
     }
 
-    public static TestStreamDecoder forOutputStreamWriter(OutputStream out,
+    public static TestStreamEecoder forOutputStreamWriter(OutputStream out,
                                                       Object lock,
                                                       Charset cs)
     {
-        return new TestStreamDecoder(out, lock, cs);
+        return new TestStreamEecoder(out, lock, cs);
     }
 
-    public static TestStreamDecoder forOutputStreamWriter(OutputStream out,
+    public static TestStreamEecoder forOutputStreamWriter(OutputStream out,
                                                       Object lock,
                                                       CharsetEncoder enc)
     {
-        return new TestStreamDecoder(out, lock, enc);
+        return new TestStreamEecoder(out, lock, enc);
     }
 
 
     // Factory for java.nio.channels.Channels.newWriter
 
-    public static TestStreamDecoder forEncoder(WritableByteChannel ch,
+    public static TestStreamEecoder forEncoder(WritableByteChannel ch,
                                            CharsetEncoder enc,
                                            int minBufferCap)
     {
-        return new TestStreamDecoder(ch, enc, minBufferCap);
+        return new TestStreamEecoder(ch, enc, minBufferCap);
     }
 
 
@@ -148,14 +148,14 @@ public class TestStreamDecoder extends Writer
     private char leftoverChar;
     private CharBuffer lcb = null;
 
-    private TestStreamDecoder(OutputStream out, Object lock, Charset cs) {
+    private TestStreamEecoder(OutputStream out, Object lock, Charset cs) {
         this(out, lock,
          cs.newEncoder()
          .onMalformedInput(CodingErrorAction.REPLACE)
          .onUnmappableCharacter(CodingErrorAction.REPLACE));
     }
 
-    private TestStreamDecoder(OutputStream out, Object lock, CharsetEncoder enc) {
+    private TestStreamEecoder(OutputStream out, Object lock, CharsetEncoder enc) {
         super(lock);
         this.out = out;
         this.ch = null;
@@ -173,7 +173,7 @@ public class TestStreamDecoder extends Writer
         }
     }
 
-    private TestStreamDecoder(WritableByteChannel ch, CharsetEncoder enc, int mbc) {
+    private TestStreamEecoder(WritableByteChannel ch, CharsetEncoder enc, int mbc) {
         this.out = null;
         this.ch = ch;
         this.cs = enc.charset();

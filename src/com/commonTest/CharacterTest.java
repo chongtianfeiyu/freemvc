@@ -13,7 +13,7 @@ public class CharacterTest {
 	public static void main(String[] args) throws UnsupportedEncodingException{
 		// 编码
 		String str = "正";
-		byte[] utf8 = str.getBytes("gbk");
+		byte[] utf8 = str.getBytes("unicode");
 		String aa1 = new String(utf8,0,2,"gbk");
 		System.out.println(aa1);
 		System.out.println("范的utf8,十六进制:"+Hex.encodeHexStr(utf8));

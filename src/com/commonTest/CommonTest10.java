@@ -1,5 +1,12 @@
 package com.commonTest;
 
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * 
  * @author liaokangli
@@ -8,7 +15,7 @@ package com.commonTest;
 public class CommonTest10 {
 	
 	public static void main(String[] args){
-		SubPerson subPerson = new SubPerson("ttt");		
+		SubPerson subPerson = new SubPerson("ttt");	
 		System.out.println("ttts:"+subPerson.getName());
 		System.out.println("parent object from child object:"+subPerson.getParentObject());
 //		String tt = "wap_bbs_gbt_160703_24xsgdxw_125_53971467529316305%2Cwap_ent_gbt_160703_24xsgdxw_125_5397146752931630";
@@ -44,6 +51,13 @@ public class CommonTest10 {
 		int tts3 = -1122145114*31;
 		System.out.println("tts3:"+tts3+";"+(~(-1122145114*31)+1));
 		
+		
+		List<Map<String,String>> listMap = new ArrayList<Map<String,String>>();
+		List<String> stringList = new ArrayList<String>();
+		Class<? extends List> classz = stringList.getClass();
+		ParameterizedType actualType = (ParameterizedType)classz.getGenericSuperclass();
+		Class<?> classz1 = (Class<?>) actualType.getActualTypeArguments()[0];
+		System.out.println("tt"+classz1);
 	}
 	
 	public static class Person{

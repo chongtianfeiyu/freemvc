@@ -43,16 +43,18 @@ public class CommonTest11 {
 //		}
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		long time1 = sdf.parse("2016-11-07 12:47:45").getTime();
-		long time2 = sdf.parse("2016-11-07 12:48:45").getTime();
+		long time1 = sdf.parse("2017-12-19 15:12:00").getTime();
+		long time2 = sdf.parse("2016-12-19 15:32:00").getTime();
 		System.out.println(time1+":"+time2);
 		
 		Random random = new Random();
 		Set<Integer> set = new HashSet<Integer>();
 		for(int i = 0;i < 100;i++){
-			Integer number = random.nextInt(100);
+			Integer number = 7000+random.nextInt(100);
 			set.add(number);
 		}
+		
+		int port = 7000 +  random.nextInt(1000);
 		
 		List<String> aa = new ArrayList<String>();
 		aa.add("tt");
@@ -134,6 +136,8 @@ public class CommonTest11 {
 		System.out.println("ls1");
 		
 		System.out.println("object size:");
+		
+		System.currentTimeMillis();
 		
 		
 	}

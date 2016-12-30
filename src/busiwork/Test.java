@@ -55,7 +55,7 @@ public class Test {
 	
     public  void write(char cbuf[], int off, int len) throws IOException {
     	// 不加true会过滤掉两个字节的字符
-    	TestStreamDecoder se = TestStreamDecoder.forOutputStreamWriter(new FileOutputStream(new File("F:\\testOut.txt")), this, (String)null);
+    	TestStreamEecoder se = TestStreamEecoder.forOutputStreamWriter(new FileOutputStream(new File("F:\\testOut.txt")), this, (String)null);
     	
         se.write(cbuf, off, len);
         se.flush();
